@@ -71,8 +71,7 @@ GROQ_API_KEY=your_groq_api_key_here
 
 LoRA 가중치 파일(`adapter_model.safetensors`)은 용량 문제로 Git 저장소에 포함되어 있지 않습니다. 아래 링크에서 다운로드해 `models/lora/` 폴더에 넣어주세요.
 
-<!-- TODO: 구글 드라이브 다운로드 링크 추가 -->
-- 다운로드 링크: (여기에 구글 드라이브 링크)
+- 다운로드 링크: [Google Drive](https://drive.google.com/drive/folders/1EPzjlv0yKN5mgs0-Z1YqYp4KWHCA0KGZ)
 
 `models/lora/` 폴더 구성:
 ```
