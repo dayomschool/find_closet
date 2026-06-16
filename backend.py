@@ -36,7 +36,6 @@ client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 FASHION_ATTRIBUTES = {
     "스타일": ["retro", "romantic", "modern", "street", "sporty", "classic", "feminine", "tomboy", "sexy"],
-    "부위": ["top", "bottom", "dress"],
     "종류": ["cardigan", "knit", "dress", "blouse", "shirt", "skirt", "jacket", "jeans", "coat", "top", "t-shirt"],
     "핏": ["normal fit", "loose fit", "skinny fit", "oversized", "wide fit", "tight fit"],
     "기장": ["crop", "normal length", "half length", "midi length", "mini length", "long length", "maxi length"],
@@ -46,7 +45,6 @@ FASHION_ATTRIBUTES = {
 
 KEYWORD_PICK_COUNTS = {
     "스타일": "1~2개",
-    "부위": "0~1개",
     "종류": "1~2개",
     "핏": "0~1개",
     "기장": "0~1개",

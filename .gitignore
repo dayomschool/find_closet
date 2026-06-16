@@ -16,3 +16,7 @@ models/lora/adapter_model.safetensors
 .DS_Store
 .vscode/
 .idea/
+
+# 실행 로그
+streamlit_out.log
+streamlit_err.log
