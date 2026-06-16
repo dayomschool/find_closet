@@ -21,7 +21,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 base_model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
 processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
 
-if os.path.exists(os.path.join(LORA_DIR, "adapter_config.json")):
+if os.path.exists(os.path.join(LORA_DIR, "adapter_config.json")) and os.path.exists(os.path.join(LORA_DIR, "adapter_model.safetensors")):
     from peft import PeftModel
     model = PeftModel.from_pretrained(base_model, LORA_DIR).to(device)
     print("LoRA 모델 사용")
