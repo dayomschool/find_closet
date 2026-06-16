@@ -67,6 +67,8 @@ pip install -r requirements.txt
 GROQ_API_KEY=your_groq_api_key_here
 ```
 
+Groq API 키는 [console.groq.com](https://console.groq.com)에서 무료로 발급받을 수 있습니다. 키가 없거나 잘못된 경우 앱 실행 자체는 정상 동작하지만, "추천받기" 클릭 시 키 발급/설정 안내 메시지가 표시됩니다.
+
 ### 4. LoRA 가중치 다운로드
 
 LoRA 가중치 파일(`adapter_model.safetensors`)은 용량 문제로 Git 저장소에 포함되어 있지 않습니다. 아래 링크에서 다운로드해 `models/lora/` 폴더에 넣어주세요.

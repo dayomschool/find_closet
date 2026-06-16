@@ -1,6 +1,7 @@
 import streamlit as st
 import os
 import tempfile
+from groq import GroqError
 from backend import (
     get_outfit_combinations,
     extract_clothing_attributes,
@@ -87,12 +88,16 @@ elif st.session_state.current_page == "results":
         selected_tabs.append("원피스"); selected_categories.append("Dress")
 
     with st.spinner("AI가 코디를 분석 중이에요..."):
-        result = get_outfit_combinations(
-            st.session_state.search_query,
-            st.session_state.sel_top,
-            st.session_state.sel_bottom,
-            st.session_state.sel_dress,
-        )
+        try:
+            result = get_outfit_combinations(
+                st.session_state.search_query,
+                st.session_state.sel_top,
+                st.session_state.sel_bottom,
+                st.session_state.sel_dress,
+            )
+        except GroqError:
+            st.error("Groq API 호출에 실패했어요. `.env`의 GROQ_API_KEY가 올바르게 설정되어 있는지 확인해주세요. (https://console.groq.com 에서 무료로 발급받을 수 있습니다)")
+            st.stop()
 
     if not result["tops"] and not result["bottoms"] and not result["dresses"]:
         st.error("옷장이 비어있어요! 먼저 옷을 등록해주세요.")
