@@ -1,0 +1,18 @@
+# 환경 변수 (API 키 포함)
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# LoRA 가중치 (용량이 커서 Git에 올리지 않음, README의 다운로드 링크 참고)
+models/lora/adapter_model.safetensors
+
+# OS / 에디터
+.DS_Store
+.vscode/
+.idea/
